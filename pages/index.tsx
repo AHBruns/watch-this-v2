@@ -108,7 +108,8 @@ function Shows() {
       ...showData,
       platforms: showData.platforms
         .split(",")
-        .map((platform) => platform.trim()),
+        .map((platform) => platform.trim())
+        .filter((v) => v),
       toggleIsCurrent() {
         request(
           API_ENDPOINT,
