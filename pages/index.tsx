@@ -5,6 +5,7 @@ import { request } from "graphql-request";
 const gql = String.raw;
 
 const API_ENDPOINT = "https://watch-this-db-1.herokuapp.com/v1/graphql";
+
 const GET_SHOWS = gql`
   query GetShows {
     shows(order_by: { id: desc }, where: { isArchived: { _eq: false } }) {
